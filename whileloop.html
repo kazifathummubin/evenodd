@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Registration Form </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body style="background-image:url('images/1.jpg');background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; ">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					  <button  onclick="window.location.href='forloop.html';" type="button" class="btn btn-primary btn-lg btn-block">Calculation by Forloop</button>
+					<button onclick="window.location.href='dowhileloop.html';" type="button" class="btn btn-secondary btn-lg btn-block">Calculation by dowhileloop loop</button>
+					<button onclick="window.location.href='whileloop.html';" type="button" class="btn btn-info btn-lg btn-block">Calculation by while loop</button>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-10">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-6">
+								<div class="contact-wrap w-100 p-lg-5 p-4">
+									<h3 class="mb-4">Calculate by whileloop</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            
+				      		</div>
+									<form style="color:white;" action="#" id="contactForm" name="student" class="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input  class="form-control" type="number" min="0" id="start" value="1">
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input  class="form-control" type="number" id="end" min="1" value="20">
+												</div>
+											</div>
+											
+											<div class="col-md-12">
+												<div class="form-group">
+													<button class="btn btn-success" onclick="printEvenNums()" value="Print Even Numbers"type="button">EvenNumber</button>
+													<button class="btn btn-success" onclick="printOddNums()" value="Print Even Numbers"type="button">OddNumber</button>
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-lg-5 p-4 img">
+									<h3>Database</h3>
+									<table class="table">
+													  <thead>
+													    <tr>
+													      
+													      <th scope="col">even number</th>
+													      <th scope="col">Odd number</th>
+													     
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      
+													      <td>  <p  id="while1" > </p></td>
+													      <td> <p  id="while2" > </p></td>
+													      
+													    </tr>
+													    
+													  </tbody>
+													</table>
+																										        			
+					     
+							          </div>
+						          </div>
+						        </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+<!--   <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/script.js"></script>
+
+   <script>
+      function printEvenNums(){
+        
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var evenNums = "";
+  						 i = start;
+                while(i<=end) {
+                   if(i % 2 == 0)
+               {
+                evenNums += i + "<br>";
+            }
+
+            i++;
+        }
+
+        
+     
+        document.getElementById("while1").innerHTML = evenNums;
+       }
+
+function printOddNums(){
+        
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var oddNums = "";
+
+            i = start;
+                while(i<=end) {
+                   if(i % 2 != 0)
+               {
+                oddNums += i + "<br>";
+            }
+
+            i++;
+        }
+
+       
+     
+        document.getElementById("while2").innerHTML = oddNums;
+       }
+
+
+
+        
+    </script>
+
+	</body>
+</html>
+
